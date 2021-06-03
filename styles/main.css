@@ -1,4 +1,4 @@
-/* CSS Reset */
+/* ========== CSS Reset ========== */
 
 * {
   margin: 0;
@@ -24,7 +24,7 @@ button {
   cursor: pointer;
 }
 
-/* Header */
+/* ========== Header ========== */
 
 #main-header {
   display: flex;
@@ -242,7 +242,104 @@ button {
   color: #202124;
 }
 
-/* Main Content */
+/* ========== Main Content ========== */
+
+#search-results {
+  margin-left: 169px;
+  padding: 0 10px 40px 10px;
+  max-width: 652px;
+}
+
+#result-stats {
+  line-height: 43px;
+  margin-bottom: 6px;
+}
+
+.result {
+  font-size: 14px;
+  margin-bottom: 44px;
+  width: 600px;
+}
+
+.result a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+.result a:hover {
+  text-decoration: underline;
+}
+
+.result a {
+  color: #551A8B;
+}
+
+.r-title {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.r-title cite {
+  color: #202124;
+  display: inline-block;
+  font-style: normal;
+}
+
+.r-title cite span {
+  color: #5f6368;
+  display: inline-block;
+  font-style: normal;
+}
+
+.r-title h2 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 3px;
+  padding-top: 5px;
+}
+
+.r-descr {
+  line-height: 1.58;
+}
+
+.r-descr a {
+  color: #5f6368;
+}
+
+.r-sublinks {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-left: 10px;
+  list-style: none;
+}
+
+.r-sublinks li {
+  padding: 12px 6px 4px 6px;
+  max-width: 240px;
+}
+
+.r-sublinks li a h3 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 3px;
+  padding-top: 5px;
+}
+
+.r-sublinks li span {
+  line-height: 1.58;
+}
+
+.r-more-link {
+  white-space: nowrap;
+}
+
+
+/* ========== Aside ========== */
+
+/* ========== Footer ========== */
 
 footer {
   background: #f2f2f2;
@@ -320,7 +417,7 @@ span#location {
   display: none;
 }
 
-/* Media Queries */
+/* ========== Media Queries ========== */
 
 @media only screen and (max-width: 768px) {
   .no-mobile,
