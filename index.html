@@ -19,25 +19,40 @@
   <body>
     <header id="main-header">
       <!-- Mobile Navigation-->
-      <span id="burger-menu" class="mobile"
-        ><svg
-          style="fill: #70757a; width: 24px; height: 24px"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg
-      ></span>
-      <!-- Nav Logo -->
-      <a id="g-logo" href="https://kpardalos.github.io/google-homepage/">
-        <img
-          src="assets/images/googlelogo_color_272x92dp.png"
-          alt="Google Logo"
-        />
-      </a>
+      <div id="mobile-wrapper">
+        <span id="burger-menu" class="mobile"
+          ><svg
+            style="fill: #70757a; width: 24px; height: 24px"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg
+        ></span>
+        <!-- Nav Logo -->
+        <a id="g-logo" href="https://kpardalos.github.io/google-homepage/">
+          <img
+            src="assets/images/googlelogo_color_272x92dp.png"
+            alt="Google Logo"
+          />
+        </a>
+        <a href="#" id="login-icon"><svg class="gb_de" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg"><path fill="#1a73e8" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78C15.57 19.36 13.86 20 12 20s-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"></path><path d="M0 0h24v24H0V0z" fill="none"></path></svg></a>
+      </div>
       <!-- Nav Search -->
       <form id="search-form">
         <div id="search-container">
+          <svg id="m-search-icon"
+            class="mic-icon"
+            focusable="false"
+            viewBox="0 0 24 24"
+            width="28px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="#9aa0a6"
+              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+            ></path>
+          </svg>
           <input
             id="search-field"
             type="text"
@@ -45,7 +60,7 @@
             autocomplete="off"
             value="the odin project"
           />
-          <svg
+          <svg id="x-icon"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -56,7 +71,7 @@
             ></path>
             <span class="search-hr"></span>
           </svg>
-          <svg
+          <svg id="mic-icon"
             focusable="false"
             viewBox="0 0 24 24"
             width="28px"
@@ -76,7 +91,7 @@
               d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"
             ></path>
           </svg>
-          <svg
+          <svg id="search-icon"
             class="mic-icon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -91,7 +106,7 @@
         </div>
       </form>
       <!-- Nav Apps/Login-->
-      <div id="top-apps">
+      <div id="top-apps" class="no-mobile">
         <span id="apps-icon" class="no-mobile">
           <svg focusable="false" viewBox="0 0 24 24">
             <path
@@ -162,6 +177,14 @@
                   >News</a
                 >
               </li>
+              <li class="mobile">
+                <a href="https://maps.google.com/maps?q=the+odin+project&gs_lcp=Cgdnd3Mtd2l6EAMyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAOgcIABBHELADOgcIABCwAxBDOgQIABBDOggILhDHARCjAjoFCAAQkQI6BAguEEM6AgguOgcILhBDEJMCOgUILhCTAjoECAAQCjoKCC4QxwEQrwEQCjoICC4QxwEQrwFQu7kBWK3wAWCT9QFoCHACeACAAc8BiAHVFpIBBjAuMTkuMZgBAKABAaoBB2d3cy13aXrIAQrAAQE&uact=5&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiWooDo4oLxAhXR0aQKHalXDqUQ_AUoBHoECAsQBA"
+                  >Maps</a>
+              </li>
+              <li class="mobile">
+                <a href="https://www.google.com/search?q=the+odin+project&prmd=ivn&source=lnms&tbm=shop&sa=X&ved=2ahUKEwiWooDo4oLxAhXR0aQKHalXDqUQ_AUoBXoECAsQBQ"
+                  >Shopping</a>
+              </li>
               <li>
                 <a href="https://www.google.com/search?q=the+odin+project&source=lnms&tbm=bks&sa=X&ved=2ahUKEwimkMeU-_vwAhUE-6QKHQftA7IQ_AUoBHoECAEQBg"
                   ><span
@@ -173,7 +196,11 @@
                   >Books</a
                 >
               </li>
-              <li>
+              <li class="mobile">
+                <a href="https://www.google.com/flights?q=the+odin+project&prmd=ivn&source=lnms&tbm=flm&sa=X&ved=2ahUKEwiWooDo4oLxAhXR0aQKHalXDqUQ_AUoB3oECAsQBw"
+                  >Flights</a>
+              </li>
+              <li class="no-mobile">
                 <a href="#"
                   ><span
                     ><svg focusable="false" viewBox="0 0 24 24" width="16px">
@@ -184,9 +211,13 @@
                   >More</a
                 >
               </li>
+              <li class="mobile m-tools">
+                <a href="#"
+                  >Searching tools</a>
+              </li>
             </ul>
           </nav>
-          <div id="nav-tools">
+          <div id="nav-tools" class="no-mobile">
             <span>Settings</span>
             <div class="tools-btn">Tools</div>
           </div>
@@ -195,11 +226,10 @@
     </header>
 
     <div id="content-container">
+      <div id="result-stats">About 16,400,000 results (0.44 seconds) 
+      </div>
       <main id="search-results">
-
-        <div id="result-stats">About 16,400,000 results (0.44 seconds) 
-        </div>
-
+        
         <!-- First Result -->
         <div id="first-result" class="result">
           
@@ -207,7 +237,7 @@
             <cite>https://www.theodinproject.com</cite>
             <h2>The Odin Project: Your Career in Web Development Starts Here</h2>
           </a>
-          <p class="r-descr"><strong>The Odin Project</strong> empowers aspiring web developers to learn together.</p>
+          <p class="r-descr"><b>The Odin Project</b> empowers aspiring web developers to learn together.</p>
           <ul class="r-sublinks">
             <li>
               <a href="https://www.theodinproject.com/paths/foundations/courses/foundations">
@@ -233,7 +263,7 @@
               <a href="https://www.theodinproject.com/about">
                 <h3>About</h3>
               </a><span>The Odin Project provides a free open source coding curriculum ...</span></li>
-              <li><a class="r-mors-link" href="https://www.google.com/search?q=the+odin+project+site:theodinproject.com&sa=X&ved=2ahUKEwimkMeU-_vwAhUE-6QKHQftA7IQrAN6BAgIEAE">More results from theodinproject.com »</a></li>
+              <li class="no-mobile"><a class="r-more-link" href="https://www.google.com/search?q=the+odin+project+site:theodinproject.com&sa=X&ved=2ahUKEwimkMeU-_vwAhUE-6QKHQftA7IQrAN6BAgIEAE">More results from theodinproject.com »</a></li>
           </ul>
           
         </div>
@@ -257,6 +287,7 @@
             <div class="h-line"></div><a href="https://www.google.com/search?q=the+odin+project&source=lnms&sa=X&ved=2ahUKEwjIsP2vmIDxAhWNh_0HHalCCdUQ_AUoAHoECAcQAg&biw=969&bih=1315&dpr=2#">Feedback</a>
           </div>
         </div>
+
         <!-- Result -->
         <div class="result">
           
@@ -266,6 +297,64 @@
           </a>
           <p class="r-descr">We are excited to announce The Odin Project's first GAME JAM! Open to anyone! - July 9th - August 1st - Beginner friendly (if you can build Rock Paper Scissors you can participate!) - Solo or team-up! - Join our Discord for more discussion on it!<a href="#">itch.io/jam/top-jam-1</a></p>
         </div>
+
+        <!-- Side Panel -->
+        <div id="side-info">
+          <div id="side-panel">
+            <div id="sp-header">
+              <div id="sp-title"><h2>The Odin Project</h2><span>Company</span></div>
+              <i><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px"><path fill="#70757a" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg></i>
+              <a href="https://www.google.com/search?q=the+odin+project&sa=X&biw=969&bih=1315&tbm=isch&source=iu&ictx=1&fir=tBCACcPaOwDNwM%252C5pDx1oZYBkaWWM%252C%252Fg%252F11f3sth9tq&vet=1&usg=AI4_-kSVrFmNeraH7nOZ-Zmo1W0xXCVqYQ&ved=2ahUKEwj0jN_b4oLxAhXB5KQKHUG4CqgQ_B16BAgvEAI#imgrc=tBCACcPaOwDNwM"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAA+CAMAAAAmsHQcAAAArlBMVEX////jsmHm5ubQnVbb29v27uXSo2LisFvp6ene3t74+Pji4uL9/PrTpWb69e/8+fbJjzPGhxro0rjw4dDNmErWq3LlzK3fv5f048rhrVTv1bHu2sXMzMzU1NTLkjz06t7DgADixaHatIPpwonnvn736dXu0abszJzktmvfpUPryJPeojnfqEvamibIrIXWvqKcdSyhezlEQkHYx7XPtpXb1c6vraugoKBVVVW/v79FYwPsAAACx0lEQVRYhe2XaXPaMBCG17LlA8uXfAARPgmFBJqeScv//2PdFSTDNHRamEQfOn5nbGAl+9Gr3Z1BAKNGjRr13opfh7gJ7sya/UZd3pvgit3cOjV4v5vP/jj5LXXrzVcny/Cs+ZmtfwfdaO7qw3K5niUgLGtjBAuru/kK2R5qPr9vrd3aDBe2O8+zjkL2dvX3R95Em7sXLGq3TQxx2+0p9+ONISx27AnXM4fFnvW8DabW2+AChEHu0ps+PKxvpZIbz1R2SdX60+cvSqmv3+StQSw4Sn6XSuvRN4edOI9K5cxvkVszc1zf2edP4Y+fk6fHvROY4zJnHz75zsLf1wsnmJjCTkKnZnuf+QyxdWAuwcxxwoXPGHMWYW3OL0zqMHAQy8LaN1lXELAgJC6rfcecXTTMAo1lDjPYvsQ92GVhaNIuyj9wmWEsCA32TWNRE9+42VH/h8SZn6/+1ogzM889/W9qmtSFYQodhyHrDuewTgLIDMFtClBUPNVRd6BbRF+LKR5TMwFR1uEsO5dZ0116Ru0RMpXQxHTXaunlqkAMtwGiNLd1uIyQFg04FtsYiQsM5RjPC4pcbJi4eBXJC3doXQ6yt1vNLWWjPULEIwWuwL3p1ZBDgriIuDbeksu5FXEr1Qjk6nNmkkI1gKTtjV3c2bg/cF3iRm3DoYEcBzQ3BlnCVVztNy1pn1P9NL6zLdAvZIK2z+W81BNLm/a5UIALSjIQDYbS8uD5Sm7V6/wqOPqd9qB6OQAnT5wf80v4MsLpTYJj5LdssQBp9Ir8Tit9ndTVIO2Y8is0137mRi1xcyzuvkegSI91ZeNyaeIV3F5zByl0K/IU3ci0P9RswY8vdYlr81IiEtOrGspvIoBWcgV3IL9TyLB/0y7XoRQ/VIprwDxD0/JGR6lu8VeOVeZWwLuYeozaFgfay7nXyuTxcNSoUaNGvbl+AUj/Lthnp5/XAAAAAElFTkSuQmCC"></a>
+            </div>
+            <a id="sp-link" href="http://www.theodinproject.com/"><i><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px"><path fill="#70757a" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg></i>theodinproject.com</a>
+            <div id="sp-body">
+              <div id="sp-founded-row"><a href="https://www.google.com/search?sa=X&biw=969&bih=1315&q=the+odin+project+founded&stick=H4sIAAAAAAAAAOPgE-LVT9c3NEwzLi7JsCwp1FLNTrbSzy9KT8zLrEosyczPQ-FYpeWX5qWkpixilSjJSFXIT8nMUygoys9KTS5RgEoBAK9u_dVTAAAA&ved=2ahUKEwj0jN_b4oLxAhXB5KQKHUG4CqgQ6BMoADAlegQIJxAC">Founded:</a><span> 2013</span></div>
+              <div id="sp-discl-row"><a href="https://www.google.com/intl/en_gr/googlefinance/disclaimer/?sa=X&ved=2ahUKEwj0jN_b4oLxAhXB5KQKHUG4CqgQ1AF6BAgrEAI">Disclaimer</a></div>
+              <div id="sp-profiles">
+                <h3>Profiles</h3>
+                <div id="sp-profile-links">
+                  <a href="https://twitter.com/theodinproject">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAABZUlEQVR4AWLQWfWQpmjUAjxo1IJRC2wBpJTDQkVRFIafKBujZrnGjbNd84wHiJNs27btrm3rrFbW1T73m20u/yMsW0cBg6zue5XCYLFQcC41JK0I3PsYaWvC+BkugYFljrbmWPp/H/86FOnhB2hGZbTg/dBhFoEBhsoEAO23Su9+5s/9nA0R/ANtXEgNJTtiAgObfB28gZaKt8Wen2ZarhRgjVL8nagGmetC+IFMb5lgqOtOZAtsLVgjcIhFZqD+RLYj0IFzGCwUcRctc7XgNNcyA7GBhAW+EWvnHK3XCjqDhg3OUpvAEegFTgAdA+nrwnuF4zCw7DSlwqOPscRxUAmtiYqY5NDXImz/6mPprlAP1sDgcjdFLokdCkPGW6Kstmbhtoim2IWNsRsvFXNsjURvBmvgiMROc11S0+BhVvmhFAUDhewrISgbg4/qlyUdeEnl+sBk7SOgfcBSb3jWaKMWjFoAABKespvtvzYlAAAAAElFTkSuQmCC" alt="Twitter Icon">
+                    <span>Twitter</span>
+                  </a>
+                  <a href="https://www.facebook.com/theodinproject/">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAA1UlEQVR4AWOwDp9LUzTELRi1wDdtaf+8w9sPXDtx7h4Q7Tt2c92OS9SxwCZibtesg0+fv3756i0aoo4FkxcdgxhHEwtiite8ePmGhhas3HIB2cRL1x5t3HV5xebzEEQFC67efAI3/cDxW7aR86icip6/QIRP9+xD1E+myOHTPv3AqAVA1DJ1/76jN+EI2YKLVx8hS+0+cgMY5yRbMHfVKbBxhNGFqw+B6mloweY9V2hrAbAIIceCugl7gE6DI2QTT124jyyVXrNxEKaiUQtGLRi1YNQCAMs01I34bbYCAAAAAElFTkSuQmCC" alt="Facebook Icon">
+                    <span>Facebook</span>
+                  </a>
+                </div>
+              </div>
+              <div id="sp-related">
+                <div id="sp-r-title">
+                  <a href="https://www.google.com/search?sa=X&biw=969&bih=1315&q=The+Odin+Project&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwzLi7JsCwpVELlaglnJ1vpJ-fn5ubnWRVnpqSWJ1YWL2IVCMlIVfBPycxTCCjKz0pNLtnByggAPSdA-0sAAAA&ved=2ahUKEwj0jN_b4oLxAhXB5KQKHUG4CqgQMSgAMCd6BAgpEAE"><h3>People also search for</h3></a>
+                  <a href="https://www.google.com/search?sa=X&biw=969&bih=1315&q=The+Odin+Project&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwzLi7JsCwpVELlaglnJ1vpJ-fn5ubnWRVnpqSWJ1YWL2IVCMlIVfBPycxTCCjKz0pNLtnByggAPSdA-0sAAAA&ved=2ahUKEwj0jN_b4oLxAhXB5KQKHUG4CqgQzTooATAnegQIKRAC">View 10+ more</a>
+                </div>
+                <div id="sp-r-body">
+                  <a href="https://www.google.com/search?sa=X&biw=969&bih=1315&q=freeCodeCamp&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwzLi7JsCwpVIJwk80MUszLkrK1-Jzzc3Pz84IzU1LLEyuLF7HypBWlpjrnp6Q6J-YW7GBlBADQiqhfQgAAAA&ved=2ahUKEwj0jN_b4oLxAhXB5KQKHUG4CqgQxA0wJ3oECCkQBQ">
+                    <div class="sp-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAxCAMAAABOHh98AAAAeFBMVEX///8KCiMAAAAAABEAABoAABUFBSEAAA0AABwAABPl5eYAAAoAAB8AABj8/PzR0dLv7/C5ubumpqnb29yJiY0hIS/Kysv19fVdXWRQUFidnaB3d3y/v8ELCyFAQEpvb3VISFAqKjeUlJgWFiiurrBlZWyAgIQ4OEIrEAPmAAADLUlEQVRIiZVX65qjIAyVoIAV7cW2Vp3eZtrZ93/DTVBrBTK7kz9+YpqchJMDTZI3W2+SX9hmzXyoDwCr/4+zAjjUsQ8fYBT8AtIGlIGPcP0ISsA28oO6YiJtQSg4Bu4UZxfzP5YNE+lBkbzqmtQycRBqyhWMkWy6TNNmAvZx7y0Yw0X6BJG17wsdLpw4ZynMgevTMxfQza8rgsi4JjcjRN5yX8/Ykpkzt1QAx64Gd0Es0i5sDSK9TS9HLOzKpfwAQcZS9YrFTRy4GMEz8ZS6QCXXQuLl5YUu67k4mwHQD5D6fOrLteS9kr0cA+XfjMdqakyllblxcSrXajL7xfncjNJED2x1Eec02qcW4l+17Yqh3Qie9WlegDBQZNKdYW2SpqI1PBl7+YrzA+xSGSJsrtitrWGOIzTHyeRUqtLtr/xkPJBgzuTPiKg5DVVYPOIOuxEQbPVPPUoeBXUZ4TMuExfT1tGbJCzOf5wi/Ii8Zgb2lo6AatphAciVc0yLiUAYgg3UjYBk71yJtFuAmOwOIWom0GakkJWN277sO9lIJWNDOQcKjgK0ZzZ1OhmU796XNs7vo+sR+sROoYlCgwLTm80IoowoO55LGH8TH7V+AKSKZsw5mpKhLw0b7meh8kiWsUMjWGTKa+TCY3qfqwIfB5uG0r4eIEz6sp9nLsLeU2oP+HiWEbi7YpF+LNSxIZwnnNYnPjod2Yrv3An1MwkChUqJ2+UGeh3r9vDLV4Ju7lG4bdRrYiJKbRroiENkXr1bzQIXJm3TQWpRTsLTyEF449cDdJbpkhb9MUD+jIK2hVC03K7B24m/6vq+w/NGgQ+IejxkrAplz/5nrMWErIidgGc7VjYonF/5Xsem4Y8N+LiD2RGrVNK7uODwRybnrv07Am6VmLWF0vuQOwg5XIH29QjvEPoNubahlrThVeYROKHK2nz5HlyNq/Mz8Sz3iyX1Wyr+VQtz99rUFF4dnT9m1d0I7fUEl/Kb59csa6uD5l8yTB+AtEJe/Izv1VaBEF1yYcMbGt3YNXvnjFkrw/s62RExxdY5Qx030WMjqb/ixxZjDffviED96v9as9CBv06xJatyPU9HAAAAAElFTkSuQmCC" alt="freeCodeCamp Icon"></div>
+                    <span>freeCodeCamp</span>
+                  </a>
+                  <a href="https://www.google.com/search?sa=X&biw=969&bih=1315&q=GitHub&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwzLi7JsCwpVOLSz9U3KKosKMhN1-Jzzs_Nzc8LzkxJLU-sLF7EyuaeWeJRmrSDlREA85FKKDkAAAA&ved=2ahUKEwj0jN_b4oLxAhXB5KQKHUG4CqgQxA0wJ3oECCkQBw">
+                    <div class="sp-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAY1BMVEX///8bHyMAAAAYHCASFxwPFRr8/Pz19fW6ursAAAcACBALEhetrq5CREbT09Tv7+/AwcFfYGLf3984OjwnKSvl5eV+f38rLjGam5xoaWunp6iKi4xMTU9VVliQkJEgIyZyc3QCqqTkAAADl0lEQVRYhZ1YV6KDIBDUBRtoYkmMMUXvf8oHYtkVNfjmTw2T7QXPO8A9b+oie/j+IyvqJr8f/XYXUfoEACE58xUYl0I9PtPoJE1eQCJ9CxKgyN1ZwvYGgc1iEMCtDd14WgZsj2ZQE/zUgeZSHdMYqqr8xfMC/otGg8P3kOZaJS40GpAdOPDiJo5BAJc9nvi3dTAY7ERCCmdoBqZ4W56TPApbMl3+waNkssLgOtuHOxh8/g2Dte+q6RPP3ipXj6yusvf9mRIxyCjPa4ofJtVT+YVdBybw0m7/TH9MI3MxkKxHFwpNratHosoHJGM9EdCO3+fIJWaaFUN++EICMqu/aZzncdrUH64I6ynxy/mvOVKuXTyG+Mt25ZJ7imIZHZlrQSgXg1he2MNCxLpJzAZlKjgWLU/4tkg+8hBcT0vks4d5RXJjP6UpInLIeOiDQzlp3IhyTBQ89asrSTLRuxE15NTgohYXRXZz41F64G411JMCdx47m/cQ4SSSWg8so3RUzFtpojO0JOY/0d5DQaMmRsQ8+31+QY+spALgi0JUOPreAEeAOtkHhPcEcNyo6vPGmp6agEJslKf3wESnpp+wW46yt4d8dpLIuyGiihK5pr4lkd9RIue41ojIwOHdMNG/veY/vAzJl7hMYjNwb2aZV6BqNPUiN6TY/YVXo0Dn1RmipyQiNChFzkUkTlqVIqRmnkm2fFW17/iZcXeiNy71WhVSfF1r/0oglqg3TzLku1oJd2dla91GUhKg/OHWakntN8WftiNfVi6ZWwhyyGR7QReYQP5stveK8gTF8Ho0m0wEDN8Z9IdVILLWjClHh3Ig+ygqX6ZZSXjmO6YKLz1QcVBXHeYsNtjmMoarhOTzjUtirrDMm0KCvQ9O46AXMn2aMy3gEp9cQEeJ3iCCjRl1GbTG0Y8NA1O8OQYOuG5PzYCKzziMDidnz46+QKg31lzaVccaZcrItLOBVeY21wwq9ziwm7O1GquFmu+tbLluEK1XSaMc68yB9PVqNsIy9C0jrVeIaan5Uf5vayJ7qRn1Z8Fhpq2J2NbsavzOb0e9bU20rYBZRTn0l0Gq8G5nCSXaWUXn5ViC6KqqkxuTACHaXY7Rus40NsyFiQ7WdXqBwKRNhMaGwwsED19pHBL9utLw0CXLARGDymVlScdrH2ERmchWnx2HjbDt9EXUhtdU4TpxEaWRFwC9/bo+dzU2INrslPdTw+G/8AfDIiZ95SC4GQAAAABJRU5ErkJggg==" alt="GitHub Icon"></div>
+                    <span>GitHub</span>
+                  </a>
+                  <a href="https://www.google.com/search?sa=X&biw=969&bih=1315&q=Codecademy&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwzLi7JsCwpVOLSz9U3yE6rsEzO0eJzzs_Nzc8LzkxJLU-sLF7EyuWcn5KanJiSmlu5g5URAEfIx149AAAA&ved=2ahUKEwj0jN_b4oLxAhXB5KQKHUG4CqgQxA0wJ3oECCkQCQ">
+                    <div class="sp-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAaVBMVEX///8UHDsAACXa292OkJkAATAAAC4AACebnabl5eiFhpAABzEAABgAAB8ADTPt7e9wcn8AAAAAACuhoqp3eYW0tbsNFzh9fonz8/TV1dnCw8j5+fpOUWFqbHhgYnEAABBCR1swNk0nLUfuwM2KAAABH0lEQVRYhe3Wa2+DIBSAYc5RQbzgvFHR6XT//0eOatOaOdcITeYS3k96TJ5EAkZCXC6X65TxS7TTpT4EeUm8E/rHIISdguNQkG5CEyj2m+x7qjCAaLgdc+YgB/015LWt6uyhEpAxxKqzhN5RzoeeFtwKqgqAQgATgL0NxFPt1B3hw0dFbKCSAi3nwfKBNYYG/UrNamwMjRLEemwMTVJ+ngvSryZfAl0Xu3sFFFK9jeaBsoM8vSGFNpoqD60g0gcg2TTGMaSRFUQmfdikPrciVXYQiRALypIhI5YQ6dq6rLPl+iSfWmuo3I4zE0iOb5t6sUD1asSfQSDFttuPlo/3SeI9hX6OzlBwv8ffIZUnO+XXHR49Hufq0Jq5XC7X/+sL+OIYb22pSn0AAAAASUVORK5CYII=" alt="Codeacademy Icon"></div>
+                    <span>Codecademy</span>
+                  </a>
+                  <a href="https://www.google.com/search?sa=X&biw=969&bih=1315&q=Khan+Academy&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwzLi7JsCwpVOLSz9U3sEzPyssx0uJzzs_Nzc8LzkxJLU-sLF7EyuOdkZin4JicmJKaW7mDlREAc80x9D8AAAA&ved=2ahUKEwj0jN_b4oLxAhXB5KQKHUG4CqgQxA0wJ3oECCkQCw">
+                    <div class="sp-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAAAoCAMAAACbzBeiAAAAVFBMVEX///8Uv5UAvZEAuozr+PTI6+C65tj2/PorwpojwZit4tK25daK2MDV8Ofb8uv7/f2e3cpx0LRZy6qR2cNGxqN607in4M5qz7E4xJ7B6NwAtoPi9e8pbBuOAAABYUlEQVRIieWV2XLCMAxF7auEGJzFCQmE8v//Wa8xlKEdOX1q75OsGZ+RZS1C/FtVuvoNzJlA592UAyClBA67KP1MMojmvpjSLASZBFqaMswFmeJJuBRQarVRsqFqJqWaKFPmTKKJVQO3nBjS9qwzlW4MzjEn5eQdp5yqI4PzkNzowYuHx5EvEcpvb77j0OAdAxVzQK5+EFrr7EyE7LM4Nr+Vdp9PbSOa1hmz7XsNPseqW2HjkjYOqM45+BwTrGv4KFzD0bA5YzRHPGDEwuXkcrNPkyodFPu/qIt2T082l7M9RUyYkumzxePkIOqtNX047HpGmn8foabFUNYXWCNojpgVZX0KGZ4WWqM/gh2PiW1J492eHO2+JJdhcEQdRylILeZkFhUHJCR3Qps0WuGUhiormKBmpC97h8ayDZa3qU/M3P185Y30tgoBXUxxav3jQO0uivAbEczt90Z1y/3rP6RPFPUJmYyl8WYAAAAASUVORK5CYII=" alt="Khan Academy Icon"></div>
+                    <span>Khan Academy</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="side-footer" class="no-mobile">
+            <a href="https://posts.google.com/claim/?mid=/g/11f3sth9tq"><i><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16px"><path fill="#4285f4" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path></svg></i><span>Claim this knowledge panel</span></a>
+            <span id="sf-feedback">Feedback</span>
+          </div>
+        </div>
+
         <!-- Result -->
         <div class="result">
           
@@ -273,8 +362,9 @@
             <cite>https://facebook.com <span>› theodinproject</span></cite>
             <h2>The Odin Project - Home Page | Facebook</h2>
           </a>
-          <p class="r-descr">TOP Jam 1 - Edutainment The very first <strong>Odin Project</strong> jam! https://www.​theodinproject.com/home Why a game jam? Games are a big reason a lot of people ge.</p>
+          <p class="r-descr">TOP Jam 1 - Edutainment The very first <b>Odin Project</b> jam! https://www.​theodinproject.com/home Why a game jam? Games are a big reason a lot of people ge.</p>
         </div>
+
         <!-- Result -->
         <div class="result">
           
@@ -282,8 +372,9 @@
             <cite>https://www.reddit.com <span>› learnprogramming › comments</span></cite>
             <h2>Anyone have any experience learning with The Odin Project ...</h2>
           </a>
-          <p class="r-descr">ve tried codeacedemy, freecodecamp and the complete web developer course on Udemy and have grasped html and css quite well. I've heard <strong></strong>the odin project</strong> ...</p>
+          <p class="r-descr">ve tried codeacedemy, freecodecamp and the complete web developer course on Udemy and have grasped html and css quite well. I've heard <b></b>the odin project</b> ...</p>
         </div>
+
         <!-- Result -->
         <div class="result">
           
@@ -291,8 +382,9 @@
             <cite>https://www.linkedin.com<span> › company › the-odin-project</span></cite>
             <h2>The Odin Project | LinkedIn</h2>
           </a>
-          <p class="r-descr"><strong>The Odin Project</strong> | 1334 followers on LinkedIn. The free and open source curriculum for learning modern web development. With over 80000 members!</p>
+          <p class="r-descr"><b>The Odin Project</b> | 1334 followers on LinkedIn. The free and open source curriculum for learning modern web development. With over 80000 members!</p>
         </div>
+
         <!-- Related Videos -->
         <div id="videos">
           <h3 id="v-title"><i>
@@ -339,6 +431,7 @@
             <a id="v-more" href="https://www.google.com/search?sa=X&biw=969&bih=1315&tbm=vid&q=the+odin+project&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ8ccDegQIBRAD"><i><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path></svg></i><span>View all</span></a>
           </div>
         </div>
+
         <!-- Result -->
         <div class="result">
           
@@ -346,40 +439,62 @@
             <cite>https://www.instagram.com <span>› theodinproject</span></cite>
             <h2>The Odin Project (@theodinproject) • Instagram photos and ...</h2>
           </a>
-          <p class="r-descr">4930 Followers, 1 Following, 15 Posts - See Instagram photos and videos from <strong>The Odin Project</strong> (@<strong>theodinproject</strong>)</p>
+          <p class="r-descr">4930 Followers, 1 Following, 15 Posts - See Instagram photos and videos from <b>The Odin Project</b> (@<b>theodinproject</b>)</p>
         </div>
+
         <!-- Related Searches -->
         <div id="related-searches">
           <h3 id="rs-title">Related Searches</h3>
           <div id="rs-list">
             <div class="rs-list-col">
-              <a class="rs-link" href="https://www.google.com/search?biw=969&bih=1315&q=The+Odin+Project+review&sa=X&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ1QIwGXoECB8QAQ"><i></i><span>the odin project <strong>review</strong></span></a>
-              <a class="rs-link" href="https://www.google.com/search?biw=969&bih=1315&q=The+Odin+project+Reddit&sa=X&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ1QIwGnoECCAQAQ"><i></i><span>the odin project <strong>reddit</strong></span></a>
-              <a class="rs-link" href="https://www.google.com/search?biw=969&bih=1315&q=The+Odin+project+which+track&sa=X&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ1QIwG3oECCEQAQ"><i></i><span>the odin project <strong>which track</strong></span></a>
-              <a class="rs-link" href="https://www.google.com/search?biw=969&bih=1315&q=The+odin+project+React&sa=X&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ1QIwHHoECCIQAQ"><i></i><span>the odin project <strong>react</strong></span></a>
+              <a class="rs-link" href="https://www.google.com/search?biw=969&bih=1315&q=The+Odin+Project+review&sa=X&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ1QIwGXoECB8QAQ"><i></i><span>the odin project <b>review</b></span></a>
+              <a class="rs-link" href="https://www.google.com/search?biw=969&bih=1315&q=The+Odin+project+Reddit&sa=X&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ1QIwGnoECCAQAQ"><i></i><span>the odin project <b>reddit</b></span></a>
+              <a class="rs-link" href="https://www.google.com/search?biw=969&bih=1315&q=The+Odin+project+which+track&sa=X&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ1QIwG3oECCEQAQ"><i></i><span>the odin project <b>which track</b></span></a>
+              <a class="rs-link" href="https://www.google.com/search?biw=969&bih=1315&q=The+odin+project+React&sa=X&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ1QIwHHoECCIQAQ"><i></i><span>the odin project <b>react</b></span></a>
             </div>
             
             <div class="rs-list-col">
-              <a class="rs-link" href="https://www.google.com/search?biw=969&bih=1315&q=The+Odin+Project+success+stories&sa=X&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ1QIwHXoECCMQAQ"><i></i><span>the odin project <strong>success stories</strong></span></a>
-<a class="rs-link" href="https://www.google.com/search?biw=969&bih=1315&q=The+Odin+project+Python&sa=X&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ1QIwHnoECCQQAQ"><i></i><span>the odin project <strong>python</strong></span></a>
-<a class="rs-link" href="https://www.google.com/search?biw=969&bih=1315&q=The+Odin+Project+vs+freeCodeCamp&sa=X&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ1QIwH3oECCUQAQ"><i></i><span>the odin project <strong>vs freecodecamp</strong></span></a>
-<a class="rs-link" href="https://www.google.com/search?biw=969&bih=1315&q=The+odin+project+Ruby+on+Rails&sa=X&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ1QIwIHoECCYQAQ"><i></i><span>the odin project <strong>ruby on rails</strong></span></a></div>
+              <a class="rs-link" href="https://www.google.com/search?biw=969&bih=1315&q=The+Odin+Project+success+stories&sa=X&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ1QIwHXoECCMQAQ"><i></i><span>the odin project <b>success stories</b></span></a>
+<a class="rs-link" href="https://www.google.com/search?biw=969&bih=1315&q=The+Odin+project+Python&sa=X&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ1QIwHnoECCQQAQ"><i></i><span>the odin project <b>python</b></span></a>
+<a class="rs-link" href="https://www.google.com/search?biw=969&bih=1315&q=The+Odin+Project+vs+freeCodeCamp&sa=X&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ1QIwH3oECCUQAQ"><i></i><span>the odin project <b>vs freecodecamp</b></span></a>
+<a class="rs-link" href="https://www.google.com/search?biw=969&bih=1315&q=The+odin+project+Ruby+on+Rails&sa=X&ved=2ahUKEwiM_IGzmIDxAhXk_rsIHTj3CxcQ1QIwIHoECCYQAQ"><i></i><span>the odin project <b>ruby on rails</b></span></a></div>
             </div>
         </div>
+
         <!-- Pagination -->
+        <div id="pagination">
+          <table id="p-nav" class="no-mobile">
+            <tbody id="p-nav-body">
+              <tr id="p-nav-row">
+                <td class="p-nav-cell"><span class="p-nav-img" style="background:url(./assets/images/nav_logo323_hr.webp) no-repeat;background-position:-24px 0;background-size:167px;width:28px"></span></td>
+                <td class="p-nav-cell"><span class="p-nav-img" style="background:url(./assets/images/nav_logo323_hr.webp) no-repeat;background-position:-53px 0;background-size:167px;width:20px"></span>1</td>
+                <td class="p-nav-cell"><a href="https://www.google.com/search?q=the+odin+project&biw=969&bih=1315&ei=kY28YLK-BsXqsAebvp6gBg&start=10&sa=N&ved=2ahUKEwjyyo250YLxAhVFNewKHRufB2QQ8tMDegQIARA3"><span class="p-nav-img" style="background:url(./assets/images/nav_logo323_hr.webp) no-repeat;background-position:-74px 0;background-size:167px;width:20px"></span>2</a></td>
+                <td class="p-nav-cell"><a href="https://www.google.com/search?q=the+odin+project&biw=969&bih=1315&ei=kY28YLK-BsXqsAebvp6gBg&start=20&sa=N&ved=2ahUKEwjyyo250YLxAhVFNewKHRufB2QQ8tMDegQIARA5"><span class="p-nav-img" style="background:url(./assets/images/nav_logo323_hr.webp) no-repeat;background-position:-74px 0;background-size:167px;width:20px"></span>3</a></td>
+                <td class="p-nav-cell"><a href="https://www.google.com/search?q=the+odin+project&biw=969&bih=1315&ei=kY28YLK-BsXqsAebvp6gBg&start=30&sa=N&ved=2ahUKEwjyyo250YLxAhVFNewKHRufB2QQ8tMDegQIARA7"><span class="p-nav-img" style="background:url(./assets/images/nav_logo323_hr.webp) no-repeat;background-position:-74px 0;background-size:167px;width:20px"></span>4</a></td>
+                <td class="p-nav-cell"><a href="https://www.google.com/search?q=the+odin+project&biw=969&bih=1315&ei=kY28YLK-BsXqsAebvp6gBg&start=40&sa=N&ved=2ahUKEwjyyo250YLxAhVFNewKHRufB2QQ8tMDegQIARA9"><span class="p-nav-img" style="background:url(./assets/images/nav_logo323_hr.webp) no-repeat;background-position:-74px 0;background-size:167px;width:20px"></span>5</a></td>
+                <td class="p-nav-cell"><a href="https://www.google.com/search?q=the+odin+project&biw=969&bih=1315&ei=kY28YLK-BsXqsAebvp6gBg&start=50&sa=N&ved=2ahUKEwjyyo250YLxAhVFNewKHRufB2QQ8tMDegQIARA_"><span class="p-nav-img" style="background:url(./assets/images/nav_logo323_hr.webp) no-repeat;background-position:-74px 0;background-size:167px;width:20px"></span>6</a></td>
+                <td class="p-nav-cell"><a href="https://www.google.com/search?q=the+odin+project&biw=969&bih=1315&ei=kY28YLK-BsXqsAebvp6gBg&start=60&sa=N&ved=2ahUKEwjyyo250YLxAhVFNewKHRufB2QQ8tMDegQIARBB"><span class="p-nav-img" style="background:url(./assets/images/nav_logo323_hr.webp) no-repeat;background-position:-74px 0;background-size:167px;width:20px"></span>7</a></td>
+                <td class="p-nav-cell"><a href="https://www.google.com/search?q=the+odin+project&biw=969&bih=1315&ei=kY28YLK-BsXqsAebvp6gBg&start=70&sa=N&ved=2ahUKEwjyyo250YLxAhVFNewKHRufB2QQ8tMDegQIARBD"><span class="p-nav-img" style="background:url(./assets/images/nav_logo323_hr.webp) no-repeat;background-position:-74px 0;background-size:167px;width:20px"></span>8</a></td>
+                <td class="p-nav-cell"><a href="https://www.google.com/search?q=the+odin+project&biw=969&bih=1315&ei=kY28YLK-BsXqsAebvp6gBg&start=80&sa=N&ved=2ahUKEwjyyo250YLxAhVFNewKHRufB2QQ8tMDegQIARBF"><span class="p-nav-img" style="background:url(./assets/images/nav_logo323_hr.webp) no-repeat;background-position:-74px 0;background-size:167px;width:20px"></span>9</a></td>
+                <td class="p-nav-cell"><a href="https://www.google.com/search?q=the+odin+project&biw=969&bih=1315&ei=kY28YLK-BsXqsAebvp6gBg&start=90&sa=N&ved=2ahUKEwjyyo250YLxAhVFNewKHRufB2QQ8tMDegQIARBH"><span class="p-nav-img" style="background:url(./assets/images/nav_logo323_hr.webp) no-repeat;background-position:-74px 0;background-size:167px;width:20px"></span>10</a></td>
+                <td class="p-nav-cell l-cell"><a href="https://www.google.com/search?q=the+odin+project&biw=969&bih=1315&ei=kY28YLK-BsXqsAebvp6gBg&start=10&sa=N&ved=2ahUKEwjyyo250YLxAhVFNewKHRufB2QQ8NMDegQIARBJ"><span class="p-nav-img" style="background:url(./assets/images/nav_logo323_hr.webp) no-repeat;background-position:-96px 0;background-size:167px;width:71px"></span><span class="l-cell-text">Next</span></a></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
 
       </main>
-      <aside id="info-box"></aside>
     </div>
 
     <footer>
-      <div id="user-location">Country<span class="footer-hr"></span><span class="loc-icon"></span><span id="location">Location</span> - From your Internet address - <a href="#">Use precise location</a> - <a href="#">Learn more</a></div>
+      <div id="user-location">Country<span class="footer-hr"></span><span class="loc-icon"></span><span id="location">Location</span> - From your Internet address - <a href="https://www.google.com/search?q=the+odin+project&source=lnms&sa=X&ved=2ahUKEwjIsP2vmIDxAhWNh_0HHalCCdUQ_AUoAHoECAcQAg&biw=969&bih=1315&dpr=2#">Use precise location</a> - <a href="https://support.google.com/websearch?p=ws_settings_location&hl=en-GR">Learn more</a></div>
       <nav id="footer-nav">
         <div class="footer-links">
-          <a href="#">Help</a>
-          <a href="#">Send feedback</a>
-          <a href="#">Privacy</a>
-          <a class="no-mobile" href="#">Terms</a>
+          <a href="https://support.google.com/websearch/?p=ws_results_help&hl=en-GR&fg=1">Help</a>
+          <a href="https://www.google.com/search?q=the+odin+project&source=lnms&sa=X&ved=2ahUKEwjIsP2vmIDxAhWNh_0HHalCCdUQ_AUoAHoECAcQAg&biw=969&bih=1315&dpr=2#">Send feedback</a>
+          <a href="https://policies.google.com/privacy?hl=en-GR&fg=1">Privacy</a>
+          <a class="no-mobile" href="https://policies.google.com/terms?hl=en-GR&fg=1">Terms</a>
         </div>
       </nav>
     </footer>
