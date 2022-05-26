@@ -1,7 +1,15 @@
-This is an assignment project from The Odin Project (https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/html-css) that was made to learn/practice my HTML/CSS skills, as well as my knowledge of how to use the browser developer tools.
+# <img src="/assets/favicon.png" width="22"/> Google Results
 
-The goal of this project is to deconstruct and rebuild the Google results page.
+[Live Demo](https://thecolordude.github.io/google-results-page/)
 
-- With HTML and CSS I built the structure and styling of the page, visually making it as close to the Google results page as possible (at the time of working with this project).
-- Using the Chrome Dev Tools I was able to replicate most elements' styling, as well as copy the vector icons and reuse them on my page. 
-- Lastly, I made the page responsive and added some mobile only elements.
+## Description
+
+A static clone (at the time of this project's creation) of the Google.com results page. 
+
+<img src="/assets/preview.png" />
+
+## Languages & Tools
+
+The following were used for the creation of this project:
+
+<img src="https://github.com/theColorDude/theColorDude/blob/main/assets/html5-original.svg" width="100" title="HTML5" /> <img src="https://github.com/theColorDude/theColorDude/blob/main/assets/css3-original.svg" width="100" title="CSS3" /> <img src="https://github.com/theColorDude/theColorDude/blob/main/assets/vscode-original.svg" width="100" title="VSCode" />
