@@ -543,9 +543,8 @@ button {
   border-radius: 8px;
   display: block;
   padding: 4px 0;
-  margin: 16px 0px 10px;
+  margin: 16px 0 10px;
   position: relative;
-  padding-right: 0;
 }
 
 .video .v-bubble:before {
@@ -1079,6 +1078,30 @@ span#location {
   text-decoration: underline;
 }
 
+.footer-links a.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+
+.footer-links a.author span {
+  display: block;
+}
+
+.footer-links a.author svg {
+  display: inline;
+  fill: #70757a;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  transition: .1s;
+}
+
+.footer-links a.author:hover svg {
+  fill: #3c3d41;
+}
+
 .mobile {
   display: none;
 }
@@ -1339,7 +1362,7 @@ span#location {
     background-color: #fff;
     border-radius: 0;
     margin: 0;
-    max-height: auto;
+    max-height: unset;
     min-height: auto;
     padding: 13px 0 13px 12px;
   }
