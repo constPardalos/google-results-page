@@ -1,6 +1,6 @@
 # <img src="assets/favicon.png" width="22"/> Google Results
 
-[Live Demo](https://thecolordude.github.io/google-results-page/)
+[Live Demo](https://constPardalos.github.io/google-results-page/)
 
 ## Description
 
